@@ -1,10 +1,9 @@
+import WellnessRetreats from "./page/WellnessRetreats";
 
 function App() {
   return (
     <>
-    <h1 className="text-3xl font-bold underline text-[#1b7092]">
-      Hello world!
-    </h1>
+     <WellnessRetreats/>
     </>
   );
 }

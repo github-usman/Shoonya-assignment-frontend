@@ -1,3 +1,22 @@
 # https://www.robotstxt.org/robotstxt.html
+# robots.txt for for Wellness Retreat
+
+# Allow all bots to crawl all content
 User-agent: *
-Disallow:
+Allow: /
+
+# Disallow sensitive directories
+Disallow: /admin/
+Disallow: /user/
+
+
+# Disallow specific files
+Disallow: /privacy-policy.pdf
+Disallow: /terms-and-conditions.pdf
+
+# Crawl delay for overly enthusiastic bots (in seconds)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+# Specify the location of the sitemap
+Sitemap: https://www.shoonya-wellness-retreat.netlify.app/sitemap.xml
