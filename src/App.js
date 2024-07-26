@@ -1,12 +1,11 @@
-import Navbar from "./components/Navbar";
-import WellnessRetreats from "./page/WellnessRetreats";
+import MainLayout from "./layouts/MainLayout";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
-    <>
-     <Navbar />
-     <WellnessRetreats/>
-    </>
+    <MainLayout>
+      <LandingPage />
+    </MainLayout>
   );
 }
 
