@@ -3,7 +3,7 @@ import hero_yoga_poster from "../assets/media/hero_yoga_poster.jpg";
 
 const Hero = () => {
   return (
-    <div className="max-h-[428px] mt-[28px] h-full bg-pearl  rounded-sm shadow-custom-shadow">
+    <div className="max-h-[428px] mt-[28px] h-full hidden md:block bg-pearl  rounded-sm shadow-custom-shadow">
       <div className=" px-[24px]  pt-[16px]">
         <img
           src={hero_yoga_poster}

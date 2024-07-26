@@ -61,9 +61,9 @@ const RetreatsList = () => {
   }, [limit, filter, location, allData, search, currentPage, selectedDate]);
 
   return (
-    <div className="mt-[25px]">
+    <div className="mt-[12px] md:mt-[25px]">
       {retreatList.length > 0 ? (
-        <div className="grid grid-cols-3 gap-[24px]">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[12px] md:gap-[24px]">
           {retreatList.map((retreat) => (
             <div key={retreat.id}>
               <Retreat data={retreat} />

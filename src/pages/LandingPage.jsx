@@ -6,7 +6,7 @@ import RetreatsList from "../components/RetreatsList";
 
 const LandingPage = () => {
   return (
-    <div className="max-w-screen-xxl w-full  px-[24px] xxl:px-0 m-auto">
+    <div className="max-w-screen-xxl w-full px-[16px] md:px-[24px] xxl:px-0 m-auto">
       <Hero />
       <FilterAndSearch />
       <RetreatsList />

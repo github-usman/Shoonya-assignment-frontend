@@ -36,11 +36,11 @@ const Pagination = () => {
     };
 
     return (
-        <div className="mt-[24px]  flex justify-center gap-[8px]">
-            <button className={`bg-spaceCadet text-white  rounded-sm px-[16px] py-[8px] ${currentPage > 1 ? '' : 'opacity-70 cursor-default'}`} onClick={(handlePrevious)} >
+        <div className="mt-[24px]  flex justify-center gap-[8px] ">
+            <button className={`bg-spaceCadet text-white rounded-3xl md:rounded-sm px-[16px] py-[8px] ${currentPage > 1 ? '' : 'opacity-70 cursor-default'}`} onClick={(handlePrevious)} >
                 Previous
             </button>
-            <button className={`bg-spaceCadet text-white  rounded-sm px-[16px] py-[8px] ${currentPage < totalPages ? '' : 'opacity-70 cursor-default'}`} onClick={handleNext}>
+            <button className={`bg-spaceCadet text-white  rounded-3xl md:rounded-sm px-[16px] py-[8px] ${currentPage < totalPages ? '' : 'opacity-70 cursor-default'}`} onClick={handleNext}>
                 Next
             </button>
         </div>
