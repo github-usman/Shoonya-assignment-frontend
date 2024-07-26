@@ -2,7 +2,7 @@ import React from "react";
 import FilterAndSearch from "../components/FilterAndSearch";
 import Hero from "../components/Hero";
 import Pagination from "../components/Pagination";
-import RetreatsList from "../components/RetreatsList";
+import RetreatsList from "../components/retreats-list/RetreatsList";
 
 const LandingPage = () => {
   return (

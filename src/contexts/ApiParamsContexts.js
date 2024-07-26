@@ -8,12 +8,15 @@ export const ApiParamsProvider = ({ children }) => {
   const [filter, setFilter] = useState("");
   const [location, setLocation] = useState("");
   const [search, setSearch] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+  const [totalPages, setTotalPages] = useState(1);
 
   const [allData, setAllData] = useState([]); // for Client side manipulation retireive all data
 
   return (
     <ApiParamsContexts.Provider
       value={{
+        isLoading,
         selectedDate,
         currentPage,
         limit,
@@ -21,13 +24,16 @@ export const ApiParamsProvider = ({ children }) => {
         location,
         search,
         allData,
+        totalPages,
+        setIsLoading,
         setSelectedDate,
         setCurrentPage,
         setLimit,
         setFilter,
         setLocation,
         setSearch,
-        setAllData
+        setAllData,
+        setTotalPages
       }}
     >
       {children}

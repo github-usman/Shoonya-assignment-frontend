@@ -1,8 +1,8 @@
 import React from "react";
-import { secondsToDate } from "../utils/secondsToDate";
+import { secondsToDate } from "../../utils/secondsToDate";
 
 // dummy data if there is no data this for backup
-import { DEFAULT_RETREAT } from "../assets/constant/dummyAssets";
+import { DEFAULT_RETREAT } from "../../assets/constant/dummyAssets";
 
 const Retreat = ({ data = DEFAULT_RETREAT }) => {
   const [monthName, day, year] = secondsToDate(data.date);

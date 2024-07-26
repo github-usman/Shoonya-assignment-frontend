@@ -16,5 +16,5 @@ export const DEFAULT_RETREAT = {
       "yoga"
     ],
     "duration": 3,
-    "id": "21"
+    "id": "2001"
   }

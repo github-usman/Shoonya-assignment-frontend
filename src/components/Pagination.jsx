@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import { useApiParamsContexts } from "../contexts/ApiParamsContexts";
 import fetchRetreats from "../services/retreatsService";
 
 const Pagination = () => {
-    const { setAllData, currentPage, setCurrentPage } = useApiParamsContexts();
-    const [totalPages, setTotalPages] = useState(1);
+    const {totalPages, currentPage,setAllData,setTotalPages, setCurrentPage } = useApiParamsContexts();
 
     // For filter or non-filter call api only ***ONE time to GET NUMBER OF ITEMS/count
     useEffect(() => {
