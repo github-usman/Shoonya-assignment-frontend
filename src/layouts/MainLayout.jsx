@@ -1,14 +1,17 @@
 import React from 'react';
 import Header from '../components/Navbar';
 import Footer from '../components/Footer';
+import { useLocation } from 'react-router-dom';
 
 
 const MainLayout = ({ children }) => {
+    const location = useLocation();
+    const hideHeaderAndFooter = location.pathname==='/' || location.pathname === '/individual-retreat-details';
     return (
         <div>
-            <Header />
+            {hideHeaderAndFooter && <Header />}
             <main>{children}</main>
-            <Footer />
+            {hideHeaderAndFooter && <Footer />}
         </div>
     );
 };

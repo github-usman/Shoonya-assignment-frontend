@@ -25,6 +25,8 @@ module.exports = {
       },
       boxShadow: {
         'custom-shadow': '0px 4px 6px rgba(0, 0, 0, 0.1)',
+        'hover-custom-shadow': '0px 4px 6px rgba(0, 0, 0, 0.5)',
+        'custom-shadow-lr': '70px 30px 30px 0px #b9adad,-70px 30px 30px 0px #b9adad',
       },
       fontFamily: {
         sans: ['Source Sans Pro', 'sans-serif'],

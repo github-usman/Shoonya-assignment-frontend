@@ -7,3 +7,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.custom-shadow-lr {
+  content: '';
+  width: 100%;
+  box-shadow: 70px 30px 50px 0px #b9adad, -70px 30px 50px 0px #b9adad;
+}
+
+/* scrollbar */
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1c467000;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #E0D9CF;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #1B3252;
+}
