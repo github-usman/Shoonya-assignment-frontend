@@ -1,5 +1,6 @@
-// date RANGE FILTER METHOD NOT PROVIDED BY MOCKAPI.IO so that we need to apply all filter method based on is on CLIENT SIDE
+// date RANGE FILTER METHOD NOT PROVIDED BY MOCKAPI.IO so 
 // Utility function for client-side filtering
+
 export const fetchClientFilter = (allData, queryParams) => {
     let filteredData = allData;
 

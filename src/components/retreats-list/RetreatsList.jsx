@@ -3,8 +3,8 @@ import { useApiParamsContexts } from "../../contexts/ApiParamsContexts";
 import Retreat from "./Retreat";
 import fetchRetreats from "../../services/retreatsService";
 import { fetchClientFilter } from "../../utils/clientFilter";
-import NoDataFound from "../NoDataFound";
-import RetreatSkeleton from "../loading-skeleton/RetreatSkeleton";
+import NoDataFound from "../common/NoDataFound";
+import RetreatSkeleton from "../common/RetreatSkeleton";
 
 const RetreatsList = () => {
   const {limit,filter,location,search,currentPage,selectedDate,allData,isLoading,setIsLoading,setTotalPages} = useApiParamsContexts();

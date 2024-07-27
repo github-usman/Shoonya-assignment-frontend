@@ -54,7 +54,7 @@ const FilterAndSearch = () => {
             </div>
             </AttentionSeeker>
             <Slide triggerOnce='true' direction="left">
-            <input name="search" type="text" placeholder="Search retreats by title" className="bg-transparent md:bg-spaceCadet rounded-sm text-black md:text-white p-[8px] py-[9px] md:p-[8px] border-[1px] border-solid border-[#D1D5DB] md:border-spaceCadet placeholder-[#374151] md:placeholder-white placeholder-opacity-100 hover:shadow-hover-custom-shadow" onChange={handleSearch} autoComplete="on"></input>
+            <input name="search" type="text" placeholder="Search retreats by title" className="w-full bg-transparent md:bg-spaceCadet rounded-sm text-black md:text-white p-[8px] py-[9px] md:p-[8px] border-[1px] border-solid border-[#D1D5DB] md:border-spaceCadet placeholder-[#374151] md:placeholder-white placeholder-opacity-100 hover:shadow-hover-custom-shadow" onChange={handleSearch} autoComplete="on"></input>
             </Slide>
         </div>
     );

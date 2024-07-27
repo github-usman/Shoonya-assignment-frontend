@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import rating from "../assets/media/star.png";
-import NoDataFound from '../components/NoDataFound';
+import NoDataFound from '../components/common/NoDataFound';
 import { AttentionSeeker } from 'react-awesome-reveal';
 
 const IndividualRetreatDetails = () => {
@@ -12,7 +12,7 @@ const IndividualRetreatDetails = () => {
     return <NoDataFound />;
   }
   const handleBookSeat = () => {
-    alert('Ticket Booking feature will available soon...')
+    alert('Ticket Booking feature will available soon...');
   }
   return (
 
@@ -27,7 +27,9 @@ const IndividualRetreatDetails = () => {
               <p className='bg-white w-fit rounded-sm py-[5px] px-1 text-black'>{data.location}</p>
               <div className='flex  gap-5'>{data.tag.map((element, index) => (<p key={index}>{element},</p>))}</div>
               <div className='flex'><p>{day} Day&emsp;.&emsp; </p> {monthName} {day}, {year}</div>
-              <AttentionSeeker triggerOnce='true' effect="rubberBand" className='bg-red-500 md:mt-[2rem] w-fit px-[3rem] md:px-[5rem] py-[16px] text-[18px] font-semibold rounded-sm hover:shadow-hover-custom-shadow' onClick={handleBookSeat}>Book Seat</AttentionSeeker>
+              <AttentionSeeker triggerOnce='true' effect="rubberBand">
+              <div className='bg-red-500 md:mt-[2rem] w-fit px-[3rem] md:px-[5rem] py-[16px] text-[18px] font-semibold rounded-sm hover:shadow-hover-custom-shadow cursor-pointer' onClick={handleBookSeat}>Book Seat</div>
+              </AttentionSeeker>
             </div>
           </div>
           <div className='flex h-[450px] gap-[10%] justify-center'>
