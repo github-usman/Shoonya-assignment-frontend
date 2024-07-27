@@ -32,7 +32,7 @@ const PaginationUtils = () => {
                       {i + 1}
                     </button>
                   );
-                } else if (i + 1 === 3) {
+                } else if (i + 1 === 3 && totalPages>4) {
                   return <button key={i + 1} >...</button>
                 } else if (i + 1 >= totalPages - 1) {
                   return (
@@ -72,7 +72,7 @@ const PaginationUtils = () => {
                       {i + 1}
                     </button>
                   );
-                } else if (i + 1 === 3) {
+                } else if (i + 1 === 3 && totalPages>4) {
                   return <button key={i + 1} >...</button>
                 } else if (i + 1 >= totalPages - 1) {
                   return (

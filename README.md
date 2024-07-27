@@ -42,7 +42,9 @@ src\
  |--index.js           # App entry point
 
 ```
-
+## Explation video link
+- link = https://www.loom.com/share/329ecadfa0744d8fb6f9a233d0cf93d3?sid=00353b3a-fe4b-475a-8792-b732338431b6
+- deployed link  = https://shoonya-assign-client.netlify.app
 ## Example/Usages
 - loading
 <img src="./src/assets/github/loading-skeleton.png" alt="Landing" style="border-radius: 2rem;"/>
