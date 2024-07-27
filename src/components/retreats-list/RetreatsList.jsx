@@ -39,6 +39,9 @@ const RetreatsList = () => {
           setRetreatList(
             filteredData.slice((currentPage - 1) * limit, limit * currentPage)
           );
+          // total pages for client-side
+          const pages = Math.ceil(filteredData?.length / 3);
+          setTotalPages(pages);
         } else {
           // Server-side filtering
           const queryParams = new URLSearchParams({
