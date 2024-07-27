@@ -29,7 +29,7 @@ const IndividualRetreatDetails = () => {
         <div className='max-w-screen-xxl w-full px-[16px] md:px-[24px] xxl:px-0 m-auto relative'>
           <div className='absolute top-1/2 z-10 left-1/2 -translate-x-1/2 md:-translate-x-0 md:left-1/3 transform  -translate-y-1/2 text-white'>
             <div className='flex flex-col gap-[1rem] text-center'>
-              <h2 className='md:mb-[2rem] text-white text-[35px] leading-[30px] font-bold'>{data.title}</h2>
+              <h2 className='md:mb-[2rem] text-white text-[35px] leading-[30px] font-bold'>{data.title.length>23?data.title.slice(0,23)+"...":data.title}</h2>
               <div className='flex items-center gap-5 flex-wrap'><img className='w-[32px] h-auto' src={rating} alt="star " />  <h4 className='text-[30px] font-bold'>6.7/10</h4> <p>33.8k people booked</p></div>
               <p className='bg-white w-fit rounded-sm py-[5px] px-1 text-black'>{data.location}</p>
               <div className='flex  gap-5'>{data.tag.map((element, index) => (<p key={index}>{element},</p>))}</div>
