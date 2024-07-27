@@ -14,7 +14,7 @@ import { AttentionSeeker } from 'react-awesome-reveal';
 
 const IndividualRetreatDetails = () => {
   const location = useLocation();
-  const { data, monthName, day, year } = location.state || {};
+  const { data } = location.state || {};
 
   if (!data) {
     return <NoDataFound />;
@@ -33,7 +33,7 @@ const IndividualRetreatDetails = () => {
               <div className='flex items-center gap-5 flex-wrap'><img className='w-[32px] h-auto' src={rating} alt="star " />  <h4 className='text-[30px] font-bold'>6.7/10</h4> <p>33.8k people booked</p></div>
               <p className='bg-white w-fit rounded-sm py-[5px] px-1 text-black'>{data.location}</p>
               <div className='flex  gap-5'>{data.tag.map((element, index) => (<p key={index}>{element},</p>))}</div>
-              <div className='flex'><p>{day} Day&emsp;.&emsp; </p> {monthName} {day}, {year}</div>
+              <div className='flex'><p>{data.day} Day&emsp;.&emsp; </p> {data.monthName} {data.day}, {data.year}</div>
               <AttentionSeeker triggerOnce='true' effect="rubberBand">
                 <div className='bg-red-500 md:mt-[2rem] w-fit px-[3rem] md:px-[5rem] py-[16px] text-[18px] font-semibold rounded-sm hover:shadow-hover-custom-shadow cursor-pointer' onClick={handleBookSeat}>Book Seat</div>
               </AttentionSeeker>
@@ -41,10 +41,10 @@ const IndividualRetreatDetails = () => {
           </div>
           <div className='flex h-[450px] gap-[10%] justify-center'>
             <div className="w-full hidden md:block md:w-1/4 p-5">
-              <img src={data.image} alt={data.title} className="max-w-full h-full object-cover rounded-sm md:rounded-lg" />
+              <img src={data.imgSrc} alt={data.title} className="max-w-full h-full object-cover rounded-sm md:rounded-lg" />
             </div>
             <div className="w-full md:w-1/2 opacity-60 custom-shadow-lr">
-              <img src={data.image} alt={data.title} className="w-full h-full object-cover" />
+              <img src={data.imgSrc} alt={data.title} className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
