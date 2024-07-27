@@ -1,4 +1,5 @@
 import React from "react";
+
 const RetreatSkeleton = () => {
     return <div className="h-full w-[100%] bg-pearl text-[16px] animate-pulse leading-[16px] md:leading-[20px] rounded-sm shadow-custom-shadow">
         <div className="p-[16px] pt-[8px]  md:p-[16px]">

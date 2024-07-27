@@ -6,6 +6,7 @@ const FilterAndSearch = () => {
     const { setFilter, setSearch, setSelectedDate,setCurrentPage, selectedDate } = useApiParamsContexts();
     const [selectedType, setSelectedType] = useState('');
 
+    // filter by DATA RANGE
     const handleDateChange = (e) => {
         const value = e.target.value;
         if (value === 'none') {
@@ -20,6 +21,7 @@ const FilterAndSearch = () => {
         }
         setCurrentPage(1);// start with intial page : RESET 
     };
+
     // filter by TYPE
     const handleSelectType = (e) => {
         const value = e.target.value;

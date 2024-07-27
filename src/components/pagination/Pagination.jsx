@@ -22,7 +22,7 @@ const Pagination = () => {
         // eslint-disable-next-line
     }, []);
     return (
-        <div className="mt-[24px]  flex justify-center ">
+        <div className="mt-[24px]  flex justify-center">
             <PaginationUtils />
         </div>
     );

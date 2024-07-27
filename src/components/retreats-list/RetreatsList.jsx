@@ -6,17 +6,28 @@ import { fetchClientFilter } from "../../utils/clientFilter";
 import NoDataFound from "../common/NoDataFound";
 import RetreatSkeleton from "../common/RetreatSkeleton";
 
+/**
+ * RetreatsList Component
+ * 
+ * This component fetches and displays a list of retreats based on various filters and parameters.
+ * It handles both client-side and server-side filtering and displays skeletons while loading.
+ */
 const RetreatsList = () => {
-  const {limit,filter,location,search,currentPage,selectedDate,allData,isLoading,setIsLoading,setTotalPages} = useApiParamsContexts();
+  // Context values
+  const { limit, filter, location, search, currentPage, selectedDate, allData, isLoading, setIsLoading, setTotalPages } = useApiParamsContexts();
   const [retreatList, setRetreatList] = useState([]);
 
   useEffect(() => {
     setIsLoading(true);
+    
+    /**
+     * Fetches data from the server or filters it on the client side based on the selected date.
+     */
     const fetchData = async () => {
       try {
         if (selectedDate) {
-           // Client-side filtering
-          //**DATE RANGE** filter method NOT PROVIDED BY MOCKAPI.IO, Applied all filter method on CLIENT SIDE
+          // Client-side filtering
+          // DATE RANGE filter method NOT PROVIDED BY MOCKAPI.IO, applied all filter methods on CLIENT SIDE
           const [startDate, endDate] = selectedDate;
           const filteredData = fetchClientFilter(allData, {
             filter,
@@ -28,7 +39,6 @@ const RetreatsList = () => {
           setRetreatList(
             filteredData.slice((currentPage - 1) * limit, limit * currentPage)
           );
-
         } else {
           // Server-side filtering
           const queryParams = new URLSearchParams({
@@ -40,26 +50,24 @@ const RetreatsList = () => {
           }).toString();
 
           const data = await fetchRetreats(queryParams);
-          setRetreatList(data); // server api called and data setted
-
+          setRetreatList(data); // server API called and data set
 
           // Calculate total pages for client-side
           const filteredData = fetchClientFilter(allData, { filter, location, search });
           const pages = Math.ceil(filteredData?.length / 3);
           setTotalPages(pages);
-
         }
         setIsLoading(false);
       } catch (error) {
         setIsLoading(false);
         if (error.statusCode === 404) {
           setRetreatList([]);
-
         } else {
           console.log("Server error:", error);
         }
       }
     };
+
     fetchData();
     // eslint-disable-next-line
   }, [limit, filter, location, allData, search, currentPage, selectedDate]);

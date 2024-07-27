@@ -5,10 +5,22 @@ import { secondsToDate } from "../../utils/secondsToDate";
 import { DEFAULT_RETREAT } from "../../assets/constant/dummyAssets";
 import { useNavigate } from "react-router-dom";
 
+/**
+ * Retreat Component
+ * 
+ * This component displays a single retreat's details. If no data is provided, it uses default retreat data.
+ * It navigates to individual retreat details when clicked.
+ * 
+ * @param {Object} props - Component props
+ * @param {Object} props.data - Retreat data to display
+ */
 const Retreat = ({ data = DEFAULT_RETREAT }) => {
   const [monthName, day, year] = secondsToDate(data.date);
-
   const navigate = useNavigate();
+
+   /**
+   * Handles the click event to navigate to individual retreat details.
+   */
   const handleIndividualDetails = () => {
     navigate('/individual-retreat-details', { state: { data,monthName,day,year } });
   }

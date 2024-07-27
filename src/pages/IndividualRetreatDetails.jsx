@@ -4,6 +4,14 @@ import rating from "../assets/media/star.png";
 import NoDataFound from '../components/common/NoDataFound';
 import { AttentionSeeker } from 'react-awesome-reveal';
 
+
+/**
+ * IndividualRetreatDetails component to display details of a specific retreat.
+ * Fetches retreat data from the location state and displays relevant information.
+ * @component
+ * @returns {JSX.Element} The rendered component.
+ */
+
 const IndividualRetreatDetails = () => {
   const location = useLocation();
   const { data, monthName, day, year } = location.state || {};
@@ -15,7 +23,6 @@ const IndividualRetreatDetails = () => {
     alert('Ticket Booking feature will available soon...');
   }
   return (
-
     <>
       {/* top  section */}
       <main className=" bg-[#1A1A1A] leading-[16px] md:leading-[20px] shadow-custom-shadow text-[18px]" >
@@ -28,7 +35,7 @@ const IndividualRetreatDetails = () => {
               <div className='flex  gap-5'>{data.tag.map((element, index) => (<p key={index}>{element},</p>))}</div>
               <div className='flex'><p>{day} Day&emsp;.&emsp; </p> {monthName} {day}, {year}</div>
               <AttentionSeeker triggerOnce='true' effect="rubberBand">
-              <div className='bg-red-500 md:mt-[2rem] w-fit px-[3rem] md:px-[5rem] py-[16px] text-[18px] font-semibold rounded-sm hover:shadow-hover-custom-shadow cursor-pointer' onClick={handleBookSeat}>Book Seat</div>
+                <div className='bg-red-500 md:mt-[2rem] w-fit px-[3rem] md:px-[5rem] py-[16px] text-[18px] font-semibold rounded-sm hover:shadow-hover-custom-shadow cursor-pointer' onClick={handleBookSeat}>Book Seat</div>
               </AttentionSeeker>
             </div>
           </div>

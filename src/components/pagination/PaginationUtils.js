@@ -1,13 +1,21 @@
 import React from "react";
 import { useApiParamsContexts } from "../../contexts/ApiParamsContexts";
 
-
+/**
+ * PaginationUtils Component
+ * 
+ * This component handles pagination controls for navigating through pages of data.
+ * It displays "Previous" and "Next" buttons for page navigation and renders page number buttons.
+ * The page number buttons are conditionally rendered based on the current page and total number of pages.
+ * 
+ * It uses the `useApiParamsContexts` hook to get and set pagination-related state.
+ */
 const PaginationUtils = () => {
   
   const { setCurrentPage, currentPage, totalPages } = useApiParamsContexts();
 
   return (
-    <div  className="flex flex-col gap-3 md:gap-0 md:flex-row">
+    <div  className="flex flex-col gap-3 md:gap-0 xsm:flex-row items-center">
       <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1} className={`bg-spaceCadet text-white rounded-3xl md:rounded-sm px-[16px] py-[8px]   ${currentPage === 1 ? 'opacity-70 cursor-default' : 'hover:shadow-hover-custom-shadow'}`}>
         Previous
       </button>
@@ -82,7 +90,7 @@ const PaginationUtils = () => {
       <button
         onClick={() => setCurrentPage(currentPage + 1)}
         disabled={currentPage >= totalPages}
-        className={`bg-spaceCadet text-white  rounded-3xl md:rounded-sm px-[16px] py-[8px]  ${currentPage >= totalPages ? 'opacity-70 cursor-default' : 'hover:shadow-hover-custom-shadow'}`}
+        className={`bg-spaceCadet text-white rounded-3xl md:rounded-sm px-[16px] py-[8px]  ${currentPage >= totalPages ? 'opacity-70 cursor-default' : 'hover:shadow-hover-custom-shadow'}`}
       >
         Next
       </button>
